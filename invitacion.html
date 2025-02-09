@@ -300,22 +300,31 @@
                   <div class="col-md-12 centrar">
                       <div class="text-center">
                           <div class="col-md-12">
+                                <h2 class="font-1 c-titulo-2 text-center _animate__fadeInDown">Ceremonia</h2>
+                            </div>
+                            <h1 class="text-center font-1 c-principal _animate__fadeInDown animate__slow">5:30 pm</h1>
+                            <h4 class="text-center font-1 c-principal _animate__fadeInDown animate__slow mb-3">Parroquia de Nuestra Señora del Sagrado Corazón</h4>
+                            <button class="btn btn-sm font-1 c-principal btn-modal d-flex align-items-center m-auto _animate__fadeInDown" data-toggle="modal" data-target="#ceremonia">
+                            Ver ubicación
+                            </button>
+                          </div>
+                          <!--<div class="col-md-12">
                               <h2 class="font-1 c-titulo-2 text-center _animate__fadeInDown">Salon de eventos Arantzza</h2>
                           </div>
                           <h4 class="text-center font-1 c-principal _animate__fadeInDown animate__slow mb-3">Esquina con, Batalla de Tunas Blancas, 24 de Abril de 1860 781, Leyes de Reforma 3ra Secc, 09310 Ciudad de México, CDMX</h4>
-                      </div>
+                      </div>-->
                   </div>
                   <div class="col-md-6 mt-4 mx-auto">
-                      <h3 class="font-1 c-titulo-2 text-center _animate__fadeInDown">Ceremonia</h3>
-                      <h1 class="text-center font-1 c-principal _animate__fadeInDown animate__slow">5:30 pm</h1>
-                      <h4 class="text-center font-1 c-principal _animate__fadeInDown animate__slow">Parroquia de Nuestra Señora del Sagrado Corazón</h4>
+                      <h3 class="font-1 c-titulo-2 text-center _animate__fadeInDown">Evento</h3>
+                      <h1 class="text-center font-1 c-principal _animate__fadeInDown animate__slow">7:00 pm</h1>
+                      <h4 class="text-center font-1 c-principal _animate__fadeInDown animate__slow">Salon de eventos Arantzza</h4>
                   </div>
-                  <div class="col-md-6 mt-4 mx-auto">
+                  <!--<div class="col-md-6 mt-4 mx-auto">
                     <h3 class="font-1 c-titulo-2 text-center _animate__fadeInDown">Evento</h3>
                     <h1 class="text-center font-1 c-principal _animate__fadeInDown animate__slow">7:00 pm</h1>
-                </div>
+                </div>-->
                   <div class="col-md-12 mt-3">
-                    <button class="btn btn-sm font-1 c-principal btn-modal d-flex align-items-center m-auto _animate__fadeInDown" data-toggle="modal" data-target="#ceremonia">
+                    <button class="btn btn-sm font-1 c-principal btn-modal d-flex align-items-center m-auto _animate__fadeInDown" data-toggle="modal" data-target="#evento">
                       Ver ubicación
                     </button>
                   </div>
@@ -349,6 +358,39 @@
 
 <!-- Modal Ceremonia-->
 <div class="modal fade" id="ceremonia" tabindex="-1" aria-labelledby="ceremoniaLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-1-img">
+            <div class="modal-header py-2" style="border-bottom: 1px solid #ffffff2e !important;">
+            <h4 class="modal-title w-100 font-1 text-center c-principal text-center">Ubicación</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="c-principal">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body pt-0">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <h3 class="my-4 font-1 c-titulo _animate__fadeInDown animate__slow text-center">Salon de eventos Arantzza</h3>
+                            <h4 class="font-1 c-principal text-center mb-3 _animate__fadeInDown animate__slow">Pedro Romero de Terreros 1507, Narvarte Poniente, Benito Juárez, 03023 Ciudad de México, CDMX</h4>
+                        </div>
+                        <div class="col-md-12 mt-1">
+                            <h4 class="font-1 text-center c-principal mb-2 _animate__fadeInDown animate__slow">Abrir con</h4>
+                        </div>
+                        <div class="col-md-12 centrar">
+                          <a href="https://ul.waze.com/ul?venue_id=170918082.1709508499.11639570&overview=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location" target="_blank">
+                            <img src="icons/waze.png" alt="" width="80px" class="mx-3 _animate__fadeInDown animate__slow">
+                        </a>
+                            <a href="https://maps.app.goo.gl/4zqkujvnu5bE3io9A" target="_blank">
+                                <img src="icons/googlemaps.png" alt="" width="80px" class="mx-3 _animate__fadeInDown animate__slow">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="evento" tabindex="-1" aria-labelledby="ceremoniaLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content bg-1-img">
             <div class="modal-header py-2" style="border-bottom: 1px solid #ffffff2e !important;">
@@ -821,7 +863,7 @@
   <!-- <script src="js/scriptv3.js?v=4" type="module"></script> -->
   <!--Carousel Chambelanes -->
 <script src="js/CarouselChambelanes.js"></script>
-  <!-- Jarallax -->
+  <!-- Jarallax --
   <script src="js/parallax.js"></script>
   <!-- galeria-efecto -->
   <script src="js/lightbox.js"></script>
