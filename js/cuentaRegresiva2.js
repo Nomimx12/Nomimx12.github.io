@@ -1,5 +1,5 @@
 const second = 0;
-const minute = 30;
+const minute = 45;
 const hour = 17;
 const day = 5;
 const month = 4;
