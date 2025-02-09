@@ -1,0 +1,21 @@
+.carrusel-icon {
+  background-color: transparent;
+  border: 2px dotted #a36a62;
+  width: 100px;
+  height: 100px;
+  padding:20px;
+  border-radius: 50%;
+  margin: 0 auto 12px auto;
+}
+
+.carrusel-icon img{
+  width: 100%;
+}
+
+.carrusel-descripcion{
+  text-align: center;
+}
+
+.carrusel-descripcion img{
+  width: 15px;
+}

@@ -1,0 +1,142 @@
+/* Pase de entrada */
+
+:root{
+    --bg-btn-pase: #fef2fe;
+    --color-btn-pase: #fff;
+    --text-btn-pase: #f6cde2;
+    --shadow-btn-pase: #0000003e;
+}
+
+.modal-pase-entrada {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1100;
+}
+
+.btn-pase-entrada {
+    background: var(--bg-btn-pase);
+    color: var(--text-btn-pase);
+    padding: 8px 40px;
+    border-radius: 0 0 16px 16px;
+    font-size: 1.2rem;
+    box-shadow: 0 0 5px var(--shadow-btn-pase);
+    font-family: 'Tipografia','sans-serif' !important;
+}
+
+.btn-descargar-pase {
+    /* background: var(--bg-btn-pase);
+    color: var(--text-btn-pase);
+    border: none;
+    padding: 8px 40px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    outline: none !important; */
+    cursor: pointer;
+    border: 2px solid var(--bg-boleto);
+    border-radius: 20px !important;
+    padding: 8px 40px;
+    color: var(--text-titulo) !important;
+    box-shadow: 0 0 10px var(--shadow-btn-confirmar);
+    font-size: 1.2rem;
+    font-family: 'Tipografia','sans-serif' !important;
+}
+
+.btn-descargar-pase:hover {
+    color: var(--text-btn-pase);
+}
+
+.pase-infantil {
+    background: var(--bg-container-boletos);
+    width: 45%;
+    font-size: 1.2rem;
+    border-radius: 0px 0px 15px 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    -webkit-text-stroke: 0.5px var(--text-principal);
+}
+
+.container-pase {
+    max-width: 500px !important;
+}
+
+.pase-entrada {
+    width: 100%;
+    max-width: 420px;
+    margin: auto;
+    background-color: var(--bg-boleto);
+    padding: 10px;
+    font-family: 'Tipografia','sans-serif' !important;
+}
+
+.foto-pase-entrada {
+    width: 90%;
+    max-width: 425px;
+}
+
+.pase-foto {
+    width: 100%;
+    height: 300px;
+    border-bottom: 3px solid var(--bg-boleto);
+    background: var(--bg-foto);
+    background-size: cover;
+    background-position: center;
+}
+
+.pase_img {
+    height: 285px;
+    width: auto;
+    margin-top: 16px;
+    object-fit: contain;
+}
+
+.pase-entrada-info {
+    background: var(--bg-info);
+    background-size: cover;
+}
+
+.boleto_fecha-pase {
+    width: 100%;
+}
+
+.nombre-evento-pase {
+    font-size: 2.2rem;
+}
+
+.pase-txt {
+    font-size: 1rem;
+    line-height: 1;
+    font-family: var(--font-family);
+    color: var(--text-principal);
+    margin: 4px 0 8px 0;
+}
+
+.pase-line {
+    width: 100%;
+    height: 3px;
+    background: var(--linea-secundaria);
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 8px;
+}
+
+.pase-titulo {
+    font-size: 1.4rem;
+    font-family: var(--font-family);
+    color: var(--text-principal);
+}
+
+#qrPase {
+    width: 80%;
+}
+
+@media (max-width:420px){
+    .nombre-evento-pase {
+        font-size: 1.8rem;
+    }
+}

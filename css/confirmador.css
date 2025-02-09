@@ -1,0 +1,420 @@
+@font-face {
+  font-family: 'Tipografia';
+  src: url("../fonts/FogtwoNo5.ttf");
+}
+
+:root{
+  --bg-foto: url(../images/bg/bg.jpg);
+  --bg-info: url(../images/bg/bg.jpg);
+  --bg-boleto: #caaaee;
+  --text-principal: #000;
+  --text-titulo: #ef9ece;
+  --linea: #fff;
+  --linea-secundaria: #f6cde268;
+  --placeholder: #111111cd;
+  --borde-input: #d7cfc2;
+  --bg-dedica-mensaje: #ffffff93;
+  --shadow-dedica-mensaje: #2525251c;
+  --bg-container-boletos: #fef2fe;
+  --borde-container-boletos: #f6cde2;
+  --borde-input-radio: #c7c7c7;
+  --bg-modal-info: url(../images/bg/bg.jpg);
+  --shadow-btn-confirmar: #ffffff00;
+  --font-family: 'Tipografia','sans-serif';
+}
+
+.font-conf {
+	font-family: 'Tipografia','sans-serif' !important;
+}
+
+.btn-confirmar{
+	background: var(--bg-boleto);
+	border: 2px solid transparent;
+	border-radius: 20px !important;
+  padding: 4px 20px !important;
+	color: #000 !important;
+  box-shadow: 0 0 10px var(--shadow-btn-confirmar);
+  font-size: 1rem !important;
+}
+
+.btn-close{
+	background: transparent;
+	border: 2px solid var(--bg-boleto);
+	border-radius: 20px !important;
+  padding: 4px 20px !important;
+	color: var(--text-principal) !important;
+  box-shadow: 0 0 10px var(--shadow-btn-confirmar);
+  font-size: 1rem !important;
+}
+
+.input-confirmador:focus,
+.input-confirmador:focus-visible {
+  color: #495057;
+  background-color: #ffffff45;
+  border-color: var(--linea-secundaria);
+  outline: 0;
+  box-shadow: 0 0 0 0.05rem var(--linea-secundaria);
+}
+
+.container-boletos {
+  background-color: var(--bg-container-boletos);
+    border-radius: 25px;
+    width: 100%;
+    margin: auto;
+    max-width: 1050px;
+    border: 3px dotted var(--borde-container-boletos);
+}
+
+.boletos-disponibles{
+  padding: 12px 20px;
+  background: var(--bg-container-boletos);
+  border-top: 3px dotted var(--borde-container-boletos);
+  border-left: 3px dotted var(--borde-container-boletos);
+  border-right: 3px dotted var(--borde-container-boletos);
+  border-radius: 16px 16px 0 0;
+}
+
+.boleto,
+.pase-entrada {
+  font-family: var(--font-family) !important;
+}
+
+.boleto {
+  background-color: #f0ebf5;
+  padding: 10px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 900px;
+  margin: auto;
+}
+
+.boleto_foto {
+  background: var(--bg-foto);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  width: 100%;
+  max-width: 286px;
+  height: 266px;
+  border-right: 3px solid var(--bg-boleto);
+}
+
+.boleto_img {
+  height: 64%;
+  margin-top: 30px;
+}
+
+.boleto_numero {
+  position: absolute;
+  top: 0px;
+  right: 16px;
+  font-size: 1.1rem;
+  color: var(--text-principal);
+}
+
+.boleto_informacion {
+  position: relative;
+  background  : var(--bg-info);
+  background-size: cover;
+  padding: 24px 16px;
+  width: 100%;
+  max-width: 588px;
+}
+
+.boleto-confirmacion {
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.boleto-line {
+  width: 100%;
+  height: 2px;
+  background: var(--linea);
+  display: block;
+  border-radius: 5px;
+}
+
+.line-fecha {
+  width: 80%;
+  margin: auto;
+}
+
+.boleto-line2 {
+  width: 40%;
+  height: 3px;
+  background: var(--linea);
+  display: block;
+  border-radius: 5px;
+  margin: auto;
+}
+
+.boleto_fecha {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 8px;
+}
+
+.dia-semana,
+.a���o {
+  font-size: 0.9rem;
+  color: var(--text-principal);
+}
+
+.mes-dia {
+  font-size: 1rem;
+  color: var(--text-principal);
+  -webkit-text-stroke: 0.5px var(--text-principal);
+}
+
+.nombre-evento {
+  margin-top: 12px;
+  font-size: 1.8rem;
+  text-align: center;
+  color: var(--text-titulo);
+}
+
+.boleto-invitado {
+  margin-top: 8px;
+}
+
+.invitado {
+  font-size: 1.2rem;
+  color: var(--text-principal);
+}
+
+.invitado-l {
+  font-size: 1.3rem;
+  padding: 4px 8px !important;
+  text-align: center;
+  margin-bottom: 7px !important;
+  border: none !important;
+  color: var(--text-principal) !important;
+  opacity: 1 !important;
+}
+
+.invitado-i {
+  border: 2px solid var(--borde-input) !important;
+  padding: 4px 25px !important;
+  border-radius: 8px !important;
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin: auto;
+  color: var(--text-principal) !important;
+  opacity: 1 !important;
+}
+
+.invitado-i::placeholder,
+.dedica-mensaje::placeholder {
+  color: var(--placeholder) !important;
+}
+
+.dedica-mensaje {
+  color: var(--text-principal) !important;
+  background: var(--bg-dedica-mensaje) !important;
+  border: 3px solid var(--linea-secundaria) !important;
+  font-family: var(--font-family);
+  font-weight: 500;
+  box-shadow: 0 .5rem 1rem var(--shadow-dedica-mensaje) !important;
+  height: 140px;
+  width: 90% !important;
+  max-width: 900px;
+  padding: 30px 50px;
+  border: 0;
+  border-radius: 11px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px
+}
+
+.bg-modal-info {
+  background: var(--bg-modal-info);
+  background-size: cover;
+}
+
+.label-txt {
+  font-size: 0.95rem;
+  color: var(--text-principal);
+  margin-bottom: 12px;
+}
+
+/* Estilos del input radio */
+.control {
+  font-family: var(--font-family);
+  display: block;
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 8px;
+  padding-top: 4px;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+  .control input {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+  }
+
+.control_indicator {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 30px;
+  width: 30px;
+  background: #fff;
+  border: 1px solid var(--borde-input-radio);
+}
+
+.control:hover input ~ .control_indicator,
+.control input:focus ~ .control_indicator {
+  background: #e5e5e5;
+}
+
+.control input:checked ~ .control_indicator {
+  background: var(--bg-boleto);
+}
+
+.control:hover input:not([disabled]):checked ~ .control_indicator,
+.control input:checked:focus ~ .control_indicator {
+  background: var(--bg-boleto);
+}
+
+.control_indicator:after {
+  box-sizing: unset;
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+.control input:checked ~ .control_indicator:after {
+  display: block;
+}
+
+.control-radio .control_indicator {
+  border-radius: 100%;
+}
+
+.control-radio .control_indicator:after {
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  margin: auto;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background: #ffffff;
+  transition: background 250ms;
+}
+
+.control-radio input:disabled ~ .control_indicator:after {
+  background: #7b7b7b;
+}
+
+.control-radio .control_indicator::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4.5rem;
+  height: 4.5rem;
+  margin-left: -1.3rem;
+  margin-top: -1.3rem;
+  background: var(--linea-secundaria);
+  border-radius: 3rem;
+  opacity: 1;
+  z-index: 99999;
+  transform: scale(0);
+}
+
+@keyframes s-ripple {
+  0% {
+      opacity: 0;
+      transform: scale(0);
+  }
+  20% {
+      transform: scale(1);
+  }
+  100% {
+      opacity: 0.01;
+      transform: scale(1);
+  }
+}
+
+@keyframes s-ripple-dup {
+  0% {
+    transform: scale(0);
+  }
+  30% {
+      transform: scale(1);
+  }
+  60% {
+      transform: scale(1);
+  }
+  100% {
+      opacity: 0;
+      transform: scale(1);
+  }
+}
+
+.control-radio input + .control_indicator::before {
+  animation: s-ripple 250ms ease-out;
+}
+
+.control-radio input:checked + .control_indicator::before {
+  animation-name: s-ripple-dup;
+}
+
+@media (max-width:1200px){
+  .boleto_informacion {
+    max-width: 519px;
+  }
+}
+
+@media (max-width:992px){
+  .boleto {
+    max-width: 310px;
+  }
+  .boleto_foto {
+    border-right: none;
+    border-bottom: 3px solid var(--bg-boleto);
+  }
+  .boleto_informacion {
+    padding: 35px 16px;
+  }
+  .boleto_numero {
+    top: 5px;
+  }
+  .control {
+    padding-left: 0;
+    padding-top: 35px;
+  }
+  .control_indicator {
+    right: 0;
+    margin: auto;
+  }
+  .container-boletos {
+    width: 70%;
+  }
+}
+
+@media (max-width:768px){
+  .container-boletos {
+    width: 100%;
+  }
+}
+
+@media (max-width:420px){
+  .control {
+    font-size: 1.1rem;
+  }
+  .mes-dia {
+    font-size: 1.1rem;
+  }
+}

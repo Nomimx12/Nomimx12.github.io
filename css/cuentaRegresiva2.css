@@ -1,0 +1,65 @@
+:root{
+  --color-number: #ef9ece;
+  --color-text: #000;
+  --color-border-circle: #fff;
+  --color-stroke-circle: #ef9ece;
+  --font-family-number: 'Tipografia-titulo','sans-serif';
+    --font-family-text: 'Tipografia-principal','sans-serif';
+}
+
+.center-abs{
+  top:40%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  position: absolute;
+}
+.charts{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.chart{
+  position: relative;
+  width: 50%;
+  max-width:350px;
+  height: 260px;
+}
+.chart h3{
+  color:var(--color-text);
+  font-family: var(--font-family-text);
+  font-size: 1.8em;
+  position: absolute;
+  bottom:10px;
+  text-align: center;
+  width: 100%;
+}
+.chart svg{
+  z-index: 52;
+}
+/* DIV CIRCULO DE FONDO */
+.circle{
+  width: 150px;
+  height:150px;
+  border-radius: 50%;
+  z-index:50;
+  border:10px var(--color-border-circle) solid;
+}
+.text{
+  z-index: 54;
+  text-align: center;
+  width: 100%;
+  font-size: 3.8em;
+  color:var(--color-number);
+  font-family: var(--font-family-number);
+}
+/* SVG CIRCULO */
+.outer{
+  fill:transparent;
+  stroke: var(--color-stroke-circle);
+  stroke-width: 10; /* grosor del borde */
+  stroke-dasharray: 439; /* numero de relleno del borde, se usa el mismo valor en el script.js */
+  transform: rotate(270deg) translate(-150px, 0); 
+  /* giramos el circulo para que su apertura sea en la parte superior 
+  y ajustamos su posicion
+  */
+}

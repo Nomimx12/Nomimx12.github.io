@@ -1,0 +1,65 @@
+/* Para aplicar el efecto de galeria en 3D donde se observan las imagenes en la parte de atras, descomentar las lineas que dicen "Galeria Efecto 1" y comentar las que dicen "Galeria Efecto2" */
+
+*, *::before, *::after {
+    box-sizing: border-box; /* Too much math below to be concerned with standard CSS Box Model element dimensions calculations.
+    Let's not have to account for padding/margins/borders on anything here. */
+}
+
+.carousel_wrapper-rotario {
+    position: relative;
+    width: 320px;
+    margin: 0 auto 0 auto;
+    perspective: 1000px;
+}
+
+.carousel-rotatorio {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    /* transform: rotateY(-360deg) translateZ(-412px);  /*Galeria Efecto 1*/
+    /* animation: swirl 50s steps(10000, end) infinite; /*Galeria Efecto 1*/
+    transition: all 1s ease-in; /*Galeria Efecto 2*/
+    animation: swirl 50s infinite linear; /*Galeria Efecto 2*/
+
+}
+
+.slide-rotatorio {
+    backface-visibility: hidden; /*Galeria Efecto 2*/
+    display: block; /*Galeria Efecto 2*/
+    overflow: hidden; /*Galeria Efecto 2*/
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 240px;
+    height: 180px;
+}
+
+.slide-rotatorio img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@keyframes swirl {
+    from {
+        transform: rotateY(-360deg);
+    }
+    to {
+        transform: rotateY(0deg);
+    }
+} 
+
+@media (max-width:840px){
+    .carousel_wrapper-rotario {
+        /* width: 279px; /*Galeria Efecto 1*/
+        width: 250px; /*Galeria Efecto 2*/
+    }
+
+    /* .slide-rotatorio {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        height: 170px;
+    } */ /*Galeria Efecto 1*/
+}

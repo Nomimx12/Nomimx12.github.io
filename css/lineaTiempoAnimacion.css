@@ -1,0 +1,119 @@
+*,*::before,*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+:root{
+  --progress-line-after: #ae4359;
+  --progress-line-before: #d9d9d9;
+  --circle-inside: #d9d9d9;
+  --circle-outside: #d9d9d9;
+  --cirlcle-border: #fff;
+  --circle-inside-after: #ae4359;
+  --circle-outside-after: #ae4359;
+  --hour-color: #000;
+  --hour-color-after: #fff;
+}
+
+.timeline-container {
+    display: flex;
+    justify-content: center;
+}
+
+.vertical-scrollable-timeline {
+    list-style-type: none;
+    position: relative;
+}
+
+.list-progress {
+    width: 6px;
+    height: 100%;
+    background-color: var(--progress-line-after);
+    position: absolute;
+    left: 42px;
+    top: 0;
+    overflow: hidden;
+    transition: .4s all;
+}
+
+.inner {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    background-color: var(--progress-line-before);
+    width: 100%;
+    transition: 0.3s all;
+}
+
+.vertical-scrollable-timeline li {
+    position: relative;
+    padding: 20px 0px 90px 0px;
+}
+
+.vertical-scrollable-timeline li:last-child{
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.icon-holder {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--circle-outside);
+    color: var(--hour-color);
+    border-radius: 50%;
+    z-index: 1;
+    transition: 0.4s all;
+}
+
+.icon-holder::before{
+    content: '';
+    width: 70px;
+    height: 70px;
+    border: 2px dotted var(--cirlcle-border);
+    position: absolute;
+    background-color: var(--circle-inside);
+    border-radius: 50%;
+    z-index: -1;
+    transition: 0.4s all;
+}
+
+.icon-holder h5{
+    font-size: 1.3rem;
+}
+
+.vertical-scrollable-timeline li.active .icon-holder{
+    background-color: var(--circle-outside-after);
+    color: var(--hour-color-after);
+}
+
+.vertical-scrollable-timeline li.active .icon-holder::before{
+    background-color: var(--circle-inside-after);            
+}
+
+.vertical-scrollable-timeline li h3 {
+    margin-bottom: 12px;
+}
+
+.border-minuto{
+    margin-left: 150px;
+    border: 1px solid #d6d6d6;
+    border-radius: 2px;
+    padding: 20px 70px;
+    -webkit-box-shadow: 0 1px 6px #bebebe8c;
+    box-shadow: 0 1px 6px #bebebe8c;
+}
+
+@media (max-width: 767px) {
+    .border-minuto{
+        margin-left: 60px;
+        padding: 20px 40px;
+    }
+}
